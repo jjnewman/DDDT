@@ -18,10 +18,6 @@ it 'can have products removed' do
 	expect(cart.itemArray.values[0]).to eq 1
 end
 
-it 'cannot have a negative quantity of products' do
-	expect{cart.removeItems(product, 1)}.to raise_error
-end
-
 it 'removes the product entirely if the quantity is zero' do
 	cart.addItems(product, 2)
 	cart.removeItems(product, 2)
@@ -33,11 +29,47 @@ it 'is able to show the total price of individual products' do
 	expect(cart.totalItemPrice(product)).to eq 100
 end
 
-it 'is able to calculate the overall price' do
+it 'is able to calculate the overall pre-discount price' do
 	cart.addItems(product, 2)
 	cart.addItems(product2, 1)
-	expect(cart.overallPrice).to eq 200
-
+	expect(cart.overallPreDiscountPrice).to eq 200
 end
+
+it 'can have the £5 voucher applied correctly' do
+	cart.addItems(product, 1)
+	cart.applyVoucher5
+	expect(cart.overallPostDiscountPrice).to eq 45
+end
+
+it 'can have the £10 voucher applied correctly' do
+	cart.addItems(product, 2)
+	cart.applyVoucher10
+	expect(cart.overallPostDiscountPrice).to eq 90
+end
+
+it 'does not apply the £10 voucher for orders under £50' do
+	cart.addItems(product, 1)
+	cart.applyVoucher10
+	expect(cart.overallPostDiscountPrice).to eq 50
+end
+
+it 'can have the £5 and £10 vouchers applied together' do
+	cart.addItems(product, 2)
+	cart.applyVoucher5	
+	cart.applyVoucher10
+	expect(cart.overallPostDiscountPrice).to eq 85
+end
+
+xit 'can have the £15 voucher applied correctly' do
+	cart.addItems(product, 2)
+	cart.applyVoucher10
+	expect(cart.overallPostDiscountPrice).to eq 90
+end
+
+
+
+
+
+
 
 end
