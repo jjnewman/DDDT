@@ -1,4 +1,4 @@
-require 'voucher'
+require_relative 'voucher'
 
 class Cart
 include Voucher

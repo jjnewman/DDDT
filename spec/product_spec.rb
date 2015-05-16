@@ -2,18 +2,12 @@ require 'product'
 
 describe 'product' do
 
-let(:product)	{Product.new('Suede Shoes', 50, 'Footwear')}
+let(:product)	{Product.new}
 
-it 'has a name, price and category' do
-  expect(product.name).to eq 'Suede Shoes'
-  expect(product.price).to eq 50
-  expect(product.category).to eq 'Footwear'
+it 'can retrieve the correct prices, categories and stock counts' do
+	expect(product.item_price("Suede Shoes, Blue")).to eq 42
+	expect(product.item_category("Suede Shoes, Blue")).to eq "Women's Footwear"
+	expect(product.item_stock("Suede Shoes, Blue")).to eq 4
 end
-
-
-
-
-
-
 
 end

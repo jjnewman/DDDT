@@ -11,19 +11,21 @@ before(:each) do
 	cart.addItems(product, 2)
 end
 
-it 'can have products added' do
-	expect(cart.itemArray.keys[0].name).to eq 'Suede Shoes'
-	expect(cart.itemArray.values[0]).to eq 2
-end
+context 'adding/removing items' do
+	it 'can have products added' do
+		expect(cart.itemArray.keys[0].name).to eq 'Suede Shoes'
+		expect(cart.itemArray.values[0]).to eq 2
+	end
 
-it 'can have products removed' do
-	cart.removeItems(product, 1)
-	expect(cart.itemArray.values[0]).to eq 1
-end
+	it 'can have products removed' do
+		cart.removeItems(product, 1)
+		expect(cart.itemArray.values[0]).to eq 1
+	end
 
-it 'removes products entirely if the quantity is zero' do
-	cart.removeItems(product, 2)
-	expect(cart.itemArray.values[0]).to eq nil
+	it 'removes products entirely if the quantity is zero' do
+		cart.removeItems(product, 2)
+		expect(cart.itemArray.values[0]).to eq nil
+	end
 end
 
 context 'price totals' do

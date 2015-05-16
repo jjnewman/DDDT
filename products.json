@@ -1,0 +1,55 @@
+[
+  {
+    "Almond Toe Court Shoes, Patent Black": {
+        "Price": 99.00, "Category": "Women's Footwear", "Stock": 5
+    },
+
+   "Suede Shoes, Blue": {
+        "Price": 42.00, "Category": "Women's Footwear", "Stock": 4
+    },
+
+   "Leather Driver Saddle Loafers, Tan": {
+        "Price": 34.00, "Category": "Men's Footwear", "Stock": 12
+    },
+
+   "Flip Flops, Red": {
+        "Price": 19.00, "Category": "Men's Footwear", "Stock": 6
+    },
+
+   "Flip Flops, Blue": {
+        "Price": 19.00, "Category": "Men's Footwear", "Stock": 0
+    },
+
+   "Gold Button Cardigan, Black": {
+        "Price": 167.00, "Category": "Women's Casualwear", "Stock": 6
+    },
+
+   "Cotton Shorts, Medium Red": {
+        "Price": 30.00, "Category": "Women's Casualwear", "Stock": 5
+    },
+
+   "Fine Stripe Short Sleeve￼Shirt, Grey": {
+        "Price": 49.99, "Category": "Men's Casualwear", "Stock": 9
+    },
+
+   "Fine Stripe Short Sleeve￼Shirt, Green": {
+        "Price": 39.99, "Category": "Men's Casualwear", "Stock": 3
+    },
+
+   "Sharkskin Waistcoat,￼Charcoal": {
+        "Price": 75.00, "Category": "Men’s Formalwear", "Stock": 2
+    },
+
+   "Lightweight Patch Pocket Blazer, Deer": {
+        "Price": 175.50, "Category": "Men’s Formalwear", "Stock": 1
+    },
+
+   "Bird Print Dress, Black": {
+        "Price": 270.00, "Category": "Women's Formalwear", "Stock": 10
+    },
+
+   "Mid Twist Cut-Out Dress, Pink": {
+        "Price": 540.00, "Category": "Women's Formalwear", "Stock": 5
+    }
+  }
+]
